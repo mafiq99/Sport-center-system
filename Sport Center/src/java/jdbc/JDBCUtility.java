@@ -6,6 +6,7 @@ package jdbc;
 
 import java.util.*;
 import java.sql.*;
+import data.SignIn;
 
 /**
  *
@@ -20,11 +21,7 @@ public class JDBCUtility
             String password;
 
               PreparedStatement psRegCustomer = null;
-//            PreparedStatement psSelectAllStudent = null;
-//            PreparedStatement psSelectStudentViaMatriks = null;
-//            PreparedStatement psUpdateStudentNameViaMatriks = null;
-//            PreparedStatement psUpdateAll = null;
-//            PreparedStatement psDeleteStudentViaMatriks = null;
+              PreparedStatement psLogin = null;
 
             //use this constructor if using ConnectionPool
             public JDBCUtility()
@@ -98,31 +95,9 @@ public class JDBCUtility
              {      
                  try
                  {
-//                     //select all student
-//                     String sqlSelectAllStudent = "SELECT * FROM student";
-//                     psSelectAllStudent = con.prepareStatement(sqlSelectAllStudent);
-//
-//                     //select student with matriks = ?
-//                     String sqlSelectStudentViaMatriks = "SELECT * FROM student where matriks = ?";
-//                     psSelectStudentViaMatriks = con.prepareStatement(sqlSelectStudentViaMatriks);
-//
                      //insert student
                        String sqlRegCustomer = "INSERT INTO customer(username, password, name, ic, phoneNum, email) VALUES(?, ?, ?, ?, ?, ?)";
                        psRegCustomer = con.prepareStatement(sqlRegCustomer);
-//
-//                     //update student name via matriks
-//                     String sqlUpdateStudentNameViaMatriks = "UPDATE student SET name = ? WHERE matriks = ?"; 
-//                     psUpdateStudentNameViaMatriks = con.prepareStatement(sqlUpdateStudentNameViaMatriks);            
-//
-//                     //update student via matriks
-//                     String sqlUpdateAllViaMatriks = "UPDATE student SET name = ?, ic = ?, age = ? WHERE matriks = ?"; 
-//                     psUpdateAll = con.prepareStatement(sqlUpdateAllViaMatriks);
-//
-//                     //delete student via matriks
-//                     String sqlDeleteStudentViaMatriks = "DELETE FROM student WHERE matriks = ?"; 
-//                     psDeleteStudentViaMatriks = con.prepareStatement(sqlDeleteStudentViaMatriks);
-//
-//                     System.out.println(psSelectAllStudent);
                  }
                  catch (SQLException ex)
                  {
@@ -146,33 +121,65 @@ public class JDBCUtility
                  }
              }
 
-//             public PreparedStatement psSelectAllStudent()
-//             {
-//               return psSelectAllStudent;
-//             } 
-//
-//             public PreparedStatement psSelectStudentViaMatriks()
-//             {
-//               return psSelectStudentViaMatriks;
-//             } 
-//
                 public PreparedStatement psRegCustomer()
                 {
                   return psRegCustomer;
                 } 
-//
-//             public PreparedStatement psUpdateStudentNameViaMatriks()
-//             {
-//               return psUpdateStudentNameViaMatriks;
-//             }
-//
-//             public PreparedStatement sqlUpdateAllViaMatriks()
-//             {
-//               return psUpdateAll;
-//             }
-//
-//             public PreparedStatement psDeleteStudentViaMatriks()
-//             {
-//               return psDeleteStudentViaMatriks;
-//             } 
+                
+                //LOGIN DAO
+    
+                public void loadDriver(String driver)
+                {
+                    try {
+                    	Class.forName(driver);
+                    } catch (ClassNotFoundException e) {
+			
+                    e.printStackTrace();
+		}
+                }
+    
+                public Connection getConnection()
+                {
+                    Connection con = null;
+                    try {
+			con = DriverManager.getConnection(url, userName, password);
+                    } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+                    }
+                    return con;
+                }
+    
+    
+                public SignIn checkLogin(String username, String password)throws SQLException,
+                ClassNotFoundException {
+        
+         
+                loadDriver(driver);
+                Connection con = getConnection();
+        
+                String sql = "select * from customer where username = ? and password = ?";
+                PreparedStatement ps;
+        
+
+                ps = con.prepareStatement(sql);
+                ps.setString(1, username);
+                ps.setString(2, password);
+
+                ResultSet result=ps.executeQuery();
+
+                SignIn signIn = null;
+
+                if(result.next()){
+                    signIn = new SignIn();
+                    signIn.setName(result.getString("Name"));
+                    signIn.setEmail(username);
+                }
+
+                con.close();
+
+                return signIn;
+            
+        
+                }
    }

@@ -48,7 +48,7 @@ public final class About_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>AIDIEL SPORT CENTRE</title>\n");
       out.write("        <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("    <link href=\"css/navbar-fixed-top.css\" rel=\"stylesheet\">\n");
       out.write("    <link href=\"css/bootstrap-toggle.min.css\" rel=\"stylesheet\">\n");
@@ -91,12 +91,12 @@ public final class About_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("      <!-- Main component for a primary marketing message or call to action -->\n");
       out.write("      <div class=\"jumbotron\">\n");
-      out.write("        <h1>Navbar example</h1>\n");
+      out.write("        <h1></h1>\n");
       out.write("        <p>This sports centre was built in 2023 and still stands to this day. The name of this center is taken from the name of its founder himself, Datuk Dr Muhammad Aidiel Bin Jamallullail.</p>\n");
-      out.write("        <p>To see the difference between static and fixed top navbars, just scroll.</p>\n");
-      out.write("        <p>\n");
-      out.write("          <a class=\"btn btn-lg btn-primary\" href=\"../../components/#navbar\" role=\"button\">View navbar docs &raquo;</a>\n");
-      out.write("        </p>\n");
+      out.write("        <br><br><br>\n");
+      out.write("        <p><i><b>\"I feel that people need to have a good healthy life, therefore I come up with the idea to built this sport centre so that many people will have more fun to work out their body. \n");
+      out.write("                  Thinking back, I went through a lot of hard work to build this sports center, but thanks to the prayers of my family and my wife I finally managed to achieve my dream\" - Datuk Dr Muhammad Aidiel</b></i></p>\n");
+      out.write("        \n");
       out.write("      </div>\n");
       out.write("\n");
       out.write("    \n");

@@ -39,7 +39,7 @@
                 <li><a href="#">My Booking</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header"></li>
-                <li><a href="#">Sign Out</a></li>
+                <li><a href="DBLogout">Sign Out</a></li>
               </ul>
             </li>
           </ul>

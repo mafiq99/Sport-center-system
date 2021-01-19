@@ -94,8 +94,7 @@ public final class About_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <h1></h1>\n");
       out.write("        <p>This sports centre was built in 2023 and still stands to this day. The name of this center is taken from the name of its founder himself, Datuk Dr Muhammad Aidiel Bin Jamallullail.</p>\n");
       out.write("        <br><br><br>\n");
-      out.write("        <p><i><b>\"I feel that people need to have a good healthy life, therefore I come up with the idea to built this sport centre so that many people will have more fun to work out their body. \n");
-      out.write("                  Thinking back, I went through a lot of hard work to build this sports center, but thanks to the prayers of my family and my wife I finally managed to achieve my dream\" - Datuk Dr Muhammad Aidiel</b></i></p>\n");
+      out.write("        <p><i><b>\"I feel that people need to have a good healthy life, therefore I come up with the idea to built this sport centre so that many people will have more fun to work out their body.\" - Datuk Dr Muhammad Aidiel</b></i></p>\n");
       out.write("        \n");
       out.write("      </div>\n");
       out.write("\n");

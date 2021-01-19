@@ -78,7 +78,7 @@ public final class Homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <li><a href=\"#\">My Booking</a></li>\n");
       out.write("                <li role=\"separator\" class=\"divider\"></li>\n");
       out.write("                <li class=\"dropdown-header\"></li>\n");
-      out.write("                <li><a href=\"#\">Sign Out</a></li>\n");
+      out.write("                <li><a href=\"DBLogout\">Sign Out</a></li>\n");
       out.write("              </ul>\n");
       out.write("            </li>\n");
       out.write("          </ul>\n");

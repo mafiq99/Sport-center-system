@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Jan 7, 2021, 12:06:12 AM
+    Created on : Jan 7, 2021, 9:18:58 AM
     Author     : 60192
 */
 
@@ -27,8 +27,13 @@ body{
     display: flex;
 }
 
-.text, .box{
+.text{
     margin-top: 45vh;
+    flex: 1;
+}
+
+.box{
+    margin-top: 33vh;
     flex: 1;
 }
 
@@ -54,13 +59,13 @@ body{
 }
 
 .text p a{
-    color: red;
+    color: blue;
     font-weight: 700;
 }
 
 .form{
     background: transparent;
-    color: #fff;
+    color: red;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -77,7 +82,7 @@ input{
     font-family: 'Raleway', sans-serif;
 }
 
-.username, .password{
+.username, .password, .fullname,.ic,.phoneNum, .email{
     border-bottom: 1px solid #fff;
 }
 
@@ -92,4 +97,3 @@ input{
     background: #fff;
     color: #000;
 }
-

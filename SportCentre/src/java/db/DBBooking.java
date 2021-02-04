@@ -99,7 +99,7 @@ public class DBBooking extends HttpServlet {
                 
                 out.println("<script>");
                 out.println("    alert('Booking success');");
-                out.println("    window.location = 'try.jsp'");
+                out.println("    window.location = 'homepage.jsp'");
                 out.println("</script>");
             }
         }

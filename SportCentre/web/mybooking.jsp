@@ -11,7 +11,11 @@
 	<link href="css/mybooking.css" rel="stylesheet">
 </head>
 <body>
-    
+    <%
+                            String name=(String)session.getAttribute("username");
+                            String password=(String)session.getAttribute("password");
+                            out.print("Welcome " + name);
+                        %>
     <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
          url = "jdbc:mysql://localhost/sportcentre"
          user = "root"  password = ""/>   

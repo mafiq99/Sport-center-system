@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Book Vehicle</title>
+    <title>Book Sport court</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="font/flaticon.css">
@@ -20,20 +20,21 @@
     <div class="container">
       <div class="book">
         <div class="description">
-          <h1><strong>Book</strong> your Ride</h1>
+          <h1><strong>Book</strong> Your sport Court</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h1>Booking Form</h1>
+            
           </p>
           <div class="quote">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              What we have at the Sport Centre
             </p>
           </div>
           <ul>
-            <li>Super reliable service</li>
-            <li>24/7 customer srvice</li>
-            <li>GPS tracking and help</li>
-            <li>Wide range vehicle</li>
+            <li>Sport Shop</li>
+            <li>Application for Professional Trainer</li>
+            <li>Parking lot</li>
+            <li>Food Truck Stall</li>
           </ul>
         </div>
         <div class="form">

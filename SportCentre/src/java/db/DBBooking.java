@@ -90,12 +90,55 @@ public class DBBooking extends HttpServlet {
             out.println(insertStatus);
             
             if (insertStatus == 1) {
-                PreparedStatement preparedStatement1 = jdbcUtility.psUpdateSunday();
-                
-                preparedStatement1.setString(1, "Unavailable");
-                preparedStatement1.setString(2, court);
-                preparedStatement1.setString(3, slot);
-                preparedStatement1.executeUpdate();
+                if(day.equals("Monday")){
+                PreparedStatement preparedStatementMonday = jdbcUtility.psUpdateMonday();            
+                preparedStatementMonday.setString(1, "Unavailable");
+                preparedStatementMonday.setString(2, court);
+                preparedStatementMonday.setString(3, slot);
+                preparedStatementMonday.executeUpdate();    
+                }
+                else if(day.equals("Tuesday")){
+                PreparedStatement preparedStatementTuesday = jdbcUtility.psUpdateTuesday();            
+                preparedStatementTuesday.setString(1, "Unavailable");
+                preparedStatementTuesday.setString(2, court);
+                preparedStatementTuesday.setString(3, slot);
+                preparedStatementTuesday.executeUpdate();    
+                }
+                else if(day.equals("Wednesday")){
+                PreparedStatement preparedStatementWednesday = jdbcUtility.psUpdateWednesday();            
+                preparedStatementWednesday.setString(1, "Unavailable");
+                preparedStatementWednesday.setString(2, court);
+                preparedStatementWednesday.setString(3, slot);
+                preparedStatementWednesday.executeUpdate();    
+                }
+                else if(day.equals("Thursday")){
+                PreparedStatement preparedStatementThursday = jdbcUtility.psUpdateThursday();            
+                preparedStatementThursday.setString(1, "Unavailable");
+                preparedStatementThursday.setString(2, court);
+                preparedStatementThursday.setString(3, slot);
+                preparedStatementThursday.executeUpdate();   
+                }
+                else if(day.equals("Friday")){
+                PreparedStatement preparedStatementFriday = jdbcUtility.psUpdateFriday();            
+                preparedStatementFriday.setString(1, "Unavailable");
+                preparedStatementFriday.setString(2, court);
+                preparedStatementFriday.setString(3, slot);
+                preparedStatementFriday.executeUpdate();    
+                }
+                else if(day.equals("Saturday")){
+                PreparedStatement preparedStatementSaturday = jdbcUtility.psUpdateSaturday();            
+                preparedStatementSaturday.setString(1, "Unavailable");
+                preparedStatementSaturday.setString(2, court);
+                preparedStatementSaturday.setString(3, slot);
+                preparedStatementSaturday.executeUpdate();    
+                }
+                else if(day.equals("Sunday")){
+                PreparedStatement preparedStatementSunday = jdbcUtility.psUpdateSunday();            
+                preparedStatementSunday.setString(1, "Unavailable");
+                preparedStatementSunday.setString(2, court);
+                preparedStatementSunday.setString(3, slot);
+                preparedStatementSunday.executeUpdate();
+                }
                 
                 out.println("<script>");
                 out.println("    alert('Booking success');");

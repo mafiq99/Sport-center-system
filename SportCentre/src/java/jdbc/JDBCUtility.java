@@ -112,7 +112,7 @@ public class JDBCUtility
                        
                        String sqlUpdateMonday = "UPDATE monday SET Status = ? WHERE Type = ? AND Slot = ?"; 
                        psUpdateMonday = con.prepareStatement(sqlUpdateMonday);
-                       String sqlUpdateTuesday = "UPDATE tueday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       String sqlUpdateTuesday = "UPDATE tuesday SET Status = ? WHERE Type = ? AND Slot = ?"; 
                        psUpdateTuesday = con.prepareStatement(sqlUpdateTuesday);                      
                        String sqlUpdateWednesday = "UPDATE wednesday SET Status = ? WHERE Type = ? AND Slot = ?"; 
                        psUpdateWednesday = con.prepareStatement(sqlUpdateWednesday);

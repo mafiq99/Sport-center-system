@@ -9,8 +9,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="title">
-Login Form</div>
+      <div class="title">Sport Centre</div>
         <form action="DBLogin" method="POST">
         <div class="field">
           <input type="text" name="username" required>
@@ -27,7 +26,7 @@ Login Form</div>
           <input type="submit" value="Login">
         </div>
 <div class="signup-link">
-Not a member? <a href="register.html">Signup now</a></div>
+Not a member? <a href="register.html">Sign up</a></div>
 </form>
 </div>
 </body>

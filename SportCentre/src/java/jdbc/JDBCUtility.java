@@ -22,7 +22,13 @@ public class JDBCUtility
 
               PreparedStatement psRegCustomer = null;
               PreparedStatement psLogin = null;
-              PreparedStatement psInsertBooking = null;
+              PreparedStatement psInsertBooking = null;              
+              PreparedStatement psUpdateMonday= null;
+              PreparedStatement psUpdateTuesday= null;
+              PreparedStatement psUpdateWednesday= null;
+              PreparedStatement psUpdateThursday= null;
+              PreparedStatement psUpdateFriday= null;
+              PreparedStatement psUpdateSaturday= null;
               PreparedStatement psUpdateSunday= null;
 
             //use this constructor if using ConnectionPool
@@ -104,6 +110,18 @@ public class JDBCUtility
                        String sqlInsertBooking = "INSERT INTO booking(username, Court, Slot, Time, Date) VALUES(?, ?, ?, ?, ?)";
                        psInsertBooking = con.prepareStatement(sqlInsertBooking);
                        
+                       String sqlUpdateMonday = "UPDATE monday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateMonday = con.prepareStatement(sqlUpdateMonday);
+                       String sqlUpdateTuesday = "UPDATE tueday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateTuesday = con.prepareStatement(sqlUpdateTuesday);                      
+                       String sqlUpdateWednesday = "UPDATE wednesday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateWednesday = con.prepareStatement(sqlUpdateWednesday);
+                       String sqlUpdateThursday = "UPDATE thursday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateThursday = con.prepareStatement(sqlUpdateThursday);
+                       String sqlUpdateFriday = "UPDATE friday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateFriday = con.prepareStatement(sqlUpdateFriday);
+                       String sqlUpdateSaturday = "UPDATE saturday SET Status = ? WHERE Type = ? AND Slot = ?"; 
+                       psUpdateSaturday = con.prepareStatement(sqlUpdateSaturday);
                        String sqlUpdateSunday = "UPDATE sunday SET Status = ? WHERE Type = ? AND Slot = ?"; 
                        psUpdateSunday = con.prepareStatement(sqlUpdateSunday);
                  }
@@ -137,8 +155,31 @@ public class JDBCUtility
                 public PreparedStatement psInsertBooking()
                 {
                   return psInsertBooking;
-                } 
-                
+                }                
+                public PreparedStatement psUpdateMonday()
+                {
+                  return psUpdateMonday;
+                }
+                public PreparedStatement psUpdateTuesday()
+                {
+                  return psUpdateTuesday;
+                }
+                public PreparedStatement psUpdateWednesday()
+                {
+                  return psUpdateWednesday;
+                }
+                public PreparedStatement psUpdateThursday()
+                {
+                  return psUpdateThursday;
+                }
+                public PreparedStatement psUpdateFriday()
+                {
+                  return psUpdateFriday;
+                }
+                public PreparedStatement psUpdateSaturday()
+                {
+                  return psUpdateSaturday;
+                }
                 public PreparedStatement psUpdateSunday()
                 {
                   return psUpdateSunday;

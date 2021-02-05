@@ -92,7 +92,10 @@ public class DBRegCustomer extends HttpServlet {
                 out.println("    alert('Registration success');");
                 out.println("    window.location = '/DBDataTable'");
                 out.println("</script>");
+                
+                sendPage(request, response, "/login.jsp"); 
             }
+            
         }
         catch (SQLException ex)
 	{

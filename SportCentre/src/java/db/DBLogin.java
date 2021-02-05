@@ -14,10 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
+import data.Customer;
 import data.SignIn;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 import jdbc.JDBCUtility;
@@ -82,25 +84,41 @@ public class DBLogin extends HttpServlet {
         String password = request.getParameter("password");
                 
         
+        
         try{
+            
            SignIn signIn = jdbcUtility.checkLogin(username, password);
            String destPage = "LoginPage.jsp";
            
            if(signIn != null){
-                      HttpSession session = request.getSession();
-                      session.setAttribute("signIn", signIn);
-                      session.setAttribute("username", username);
-                      session.setAttribute("password", password);
-                      destPage ="homepage.jsp";
+               
+                    String name = signIn.getName();
+                    String email = signIn.getEmail();
+                    String ic = signIn.getIc();
+                    int phoneNum = signIn.getPhoneNum();
+                    int ID = signIn.getID();
+                    password = signIn.getPassword();
+
+                    HttpSession session = request.getSession();
+                    
+                    Customer customerlist = new Customer(password, name, ic, email, phoneNum, ID);
+                    
+                    session.setAttribute("customer", customerlist);
+                    
+                    session.setAttribute("signIn", signIn);
+                    session.setAttribute("username", username);
+                    session.setAttribute("password", password);
+                    destPage ="homepage.jsp";
            }
            else{
                String message = "Invalid username or password";
                request.setAttribute("message", message);
            }
            
-            RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-            dispatcher.forward(request, response);
-        } catch (SQLException | ClassNotFoundException ex) {
+           RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+           dispatcher.forward(request, response);
+        } 
+        catch (SQLException | ClassNotFoundException ex) {
             throw new ServletException(ex);
 
     }

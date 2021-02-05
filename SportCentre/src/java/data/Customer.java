@@ -9,8 +9,30 @@ package data;
  * @author U
  */
 public class Customer {
+
+    
+
+    
     private String username, password, name, ic, email;
-    private int phoneNum;
+    private int phoneNum, ID;
+
+    
+    public Customer(String password, String name, String ic, String email, int phoneNum, int ID) {
+        this.password = password;
+        this.name = name;
+        this.ic = ic;
+        this.email = email;
+        this.phoneNum = phoneNum;
+        this.ID = ID;
+    }
+    
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     /**
      * @return the username
@@ -36,7 +58,7 @@ public class Customer {
     /**
      * @param password the password to set
      */
-    public void setPasword (String password) {
+    public void setPassword (String password) {
         this.password = password;
     }
 
@@ -50,28 +72,28 @@ public class Customer {
     /**
      * @param name the name to set
      */
-    public void setIc(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
     /**
      * @return the ic
      */
-    public String getIC() {
+    public String getIc() {
         return ic;
     }
 
     /**
      * @param ic the ic to set
      */
-    public void setIC(String ic) {
+    public void setIc(String ic) {
         this.ic = ic;
     }
 
     /**
      * @return the phoneNum
      */
-    public int getAge() {
+    public int getPhoneNum() {
         return phoneNum;
     }
 

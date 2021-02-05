@@ -18,7 +18,7 @@
                                         <li><a href="homepage.jsp">Home</a></li>
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="mybooking.jsp">My Booking</a></li>
-                                        <li><a href="#">My Profile</a></li>
+                                        <li><a href="myprofile.jsp">My Profile</a></li>
                                     </ul>
 
 				</nav>

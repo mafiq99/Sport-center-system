@@ -191,7 +191,12 @@ public class JDBCUtility
                 if(result.next()){
                     signIn = new SignIn();
                     signIn.setName(result.getString("Name"));
-                    signIn.setEmail(username);
+                    signIn.setEmail(result.getString("email"));
+                    signIn.setIc(result.getString("ic"));
+                    signIn.setPhoneNum(result.getInt("phoneNum"));
+                    signIn.setID(result.getInt("ID"));
+                    signIn.setPassword(result.getString("password"));
+                   
                 }
 
                 con.close();

@@ -30,6 +30,13 @@ public class JDBCUtility
               PreparedStatement psUpdateFriday= null;
               PreparedStatement psUpdateSaturday= null;
               PreparedStatement psUpdateSunday= null;
+              PreparedStatement psDateMonday=null;              
+              PreparedStatement psDateTuesday=null;
+              PreparedStatement psDateWednesday=null;
+              PreparedStatement psDateThursday=null;
+              PreparedStatement psDateFriday=null;
+              PreparedStatement psDateSaturday=null;
+              PreparedStatement psDateSunday=null;
 
             //use this constructor if using ConnectionPool
             public JDBCUtility()
@@ -124,6 +131,21 @@ public class JDBCUtility
                        psUpdateSaturday = con.prepareStatement(sqlUpdateSaturday);
                        String sqlUpdateSunday = "UPDATE sunday SET Status = ? WHERE Type = ? AND Slot = ?"; 
                        psUpdateSunday = con.prepareStatement(sqlUpdateSunday);
+                       
+                       String sqlDateMonday = "UPDATE monday SET Date = ? "; 
+                       psDateMonday = con.prepareStatement(sqlDateMonday);
+                       String sqlDateTuesday = "UPDATE tuesday SET Date = ? "; 
+                       psDateTuesday = con.prepareStatement(sqlDateTuesday);                      
+                       String sqlDateWednesday = "UPDATE wednesday SET Date = ? "; 
+                       psDateWednesday = con.prepareStatement(sqlDateWednesday);
+                       String sqlDateThursday = "UPDATE thursday SET Date = ? "; 
+                       psDateThursday = con.prepareStatement(sqlDateThursday);
+                       String sqlDateFriday = "UPDATE friday SET Date = ? "; 
+                       psDateFriday = con.prepareStatement(sqlDateFriday);
+                       String sqlDateSaturday = "UPDATE saturday SET Date = ? "; 
+                       psDateSaturday = con.prepareStatement(sqlDateSaturday);
+                       String sqlDateSunday = "UPDATE sunday SET Date = ? "; 
+                       psDateSunday = con.prepareStatement(sqlDateSunday);
                  }
                  catch (SQLException ex)
                  {
@@ -183,6 +205,35 @@ public class JDBCUtility
                 public PreparedStatement psUpdateSunday()
                 {
                   return psUpdateSunday;
+                } 
+                
+                public PreparedStatement psDateMonday()
+                {
+                  return psDateMonday;
+                }
+                public PreparedStatement psDateTuesday()
+                {
+                  return psDateTuesday;
+                }
+                public PreparedStatement psDateWednesday()
+                {
+                  return psDateWednesday;
+                }
+                public PreparedStatement psDateThursday()
+                {
+                  return psDateThursday;
+                }
+                public PreparedStatement psDateFriday()
+                {
+                  return psUpdateFriday;
+                }
+                public PreparedStatement psDateSaturday()
+                {
+                  return psDateSaturday;
+                }
+                public PreparedStatement psDateSunday()
+                {
+                  return psDateSunday;
                 } 
                 
                 //LOGIN DAO

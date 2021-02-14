@@ -21,8 +21,11 @@ public class JDBCUtility
             String password;
 
               PreparedStatement psRegCustomer = null;
+              
               PreparedStatement psLogin = null;
-              PreparedStatement psInsertBooking = null;              
+              
+              PreparedStatement psInsertBooking = null;  
+              
               PreparedStatement psUpdateMonday= null;
               PreparedStatement psUpdateTuesday= null;
               PreparedStatement psUpdateWednesday= null;
@@ -30,6 +33,7 @@ public class JDBCUtility
               PreparedStatement psUpdateFriday= null;
               PreparedStatement psUpdateSaturday= null;
               PreparedStatement psUpdateSunday= null;
+              
               PreparedStatement psDateMonday=null;              
               PreparedStatement psDateTuesday=null;
               PreparedStatement psDateWednesday=null;
@@ -37,6 +41,9 @@ public class JDBCUtility
               PreparedStatement psDateFriday=null;
               PreparedStatement psDateSaturday=null;
               PreparedStatement psDateSunday=null;
+              
+              PreparedStatement psCancelBooking=null;
+              PreparedStatement psSearching=null;
 
             //use this constructor if using ConnectionPool
             public JDBCUtility()
@@ -146,6 +153,12 @@ public class JDBCUtility
                        psDateSaturday = con.prepareStatement(sqlDateSaturday);
                        String sqlDateSunday = "UPDATE sunday SET Date = ? "; 
                        psDateSunday = con.prepareStatement(sqlDateSunday);
+                       
+                       String sqlSearching = "SELECT * FROM booking where username = ?";
+                       psSearching = con.prepareStatement(sqlSearching);
+                       
+                       String sqlCancelBooking = "DELETE FROM booking where username = ?";
+                       psCancelBooking = con.prepareStatement(sqlCancelBooking);
                  }
                  catch (SQLException ex)
                  {
@@ -235,6 +248,16 @@ public class JDBCUtility
                 {
                   return psDateSunday;
                 } 
+                
+                public PreparedStatement psCancelBooking()
+                {
+                  return psCancelBooking;
+                } 
+                
+                public PreparedStatement psSearching()
+                {
+                  return psSearching;
+                }
                 
                 //LOGIN DAO
     

@@ -108,7 +108,7 @@ public class DBSearching extends HttpServlet {
                     out.println("       <td> <button type='button'>Precence</button></td>");
                 }               
                 out.println("       <td> <button type='button'>Cancel Booking</button></td>");
-                out.println("    <tr>");
+                out.println("    <tr>"); 
             }
                 out.println("  <tbody>");
                 out.println("</table>");

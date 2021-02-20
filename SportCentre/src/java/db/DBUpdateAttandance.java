@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,17 +18,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import jdbc.JDBCUtility;
 
 /**
  *
- * @author STUDENT
+ * @author 60192
  */
-@WebServlet(name = "DBSearching", urlPatterns = {"/DBSearching"})
-public class DBSearching extends HttpServlet {
-    
+@WebServlet(name = "DBUpdateAttandance", urlPatterns = {"/DBUpdateAttandance"})
+public class DBUpdateAttandance extends HttpServlet {
+
     private JDBCUtility jdbcUtility;
     private Connection con;
     
@@ -50,8 +48,7 @@ public class DBSearching extends HttpServlet {
         jdbcUtility.jdbcConnect();
         con = jdbcUtility.jdbcGetConnection();
         jdbcUtility.prepareSQLStatement();
-    }        
-
+    }      
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -66,67 +63,32 @@ public class DBSearching extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         int insertStatus = 0;
-        String username = request.getParameter("user");
-        String court, slot, time, date, presence, orderID;
-        try {                    
-            PreparedStatement preparedStatement = jdbcUtility.psSearching();
-            preparedStatement.setString(1, username);
-            ResultSet rs = preparedStatement.executeQuery();
+        
+        String orderID = request.getParameter("id");
+        
+        try {
+            PreparedStatement preparedStatement = jdbcUtility.psUpdateAttandance();
+            
+            preparedStatement.setString(1, "Presence");
+            preparedStatement.setString(2, orderID);
+            
+            insertStatus = preparedStatement.executeUpdate();
+            
             PrintWriter out = response.getWriter();
             
-            out.println("<h2>View All Student</h2>");
-            out.println("<table border='1'>");
-            out.println("  <thead>");
-            out.println("    <tr>");
-            out.println("       <th>Order ID</th>");
-            out.println("       <th>Username</th>");
-            out.println("       <th>Court</th>");
-            out.println("       <th>Slot</th>");
-            out.println("       <th>Time</th>");
-            out.println("       <th>Date</th>");
-            out.println("       <th></th>");
-            out.println("       <th></th>");
-            out.println("    </tr>");
-            out.println("  </thead>");
-            out.println("  <tbody>");
+            out.println(insertStatus);
             
-            while (rs.next()) {
-                court = rs.getString("Court");
-                slot = rs.getString("Slot");
-                time = rs.getString("Time");
-                date = rs.getString("Date");
-                orderID = rs.getString("orderID");
-                presence = rs.getString("attendance");
-                out.println("    <tr>");
-                out.println("       <td>" + orderID + "</td>");
-                out.println("       <td>" + username + "</td>");
-                out.println("       <td>" + court + "</td>");
-                out.println("       <td>" + slot + "</td>");
-                out.println("       <td>" + time + "</td>");
-                out.println("       <td>" + date + "</td>");
-                if( presence.equals("Presence")){
-                    out.println("       <td>Presence</td>");
-                    
-                    out.println("       <td>");
-                    out.println("       <input type='submit' value='Cancel Booking' disabled> </form>");
-                    out.println("       </td>"); 
-                }
-                else{
-                    out.println("       <td> <form action='DBUpdateAttandance' method='post'>  ");                    
-                    out.println("       <input type='hidden' name='id' value='" + orderID + "'> ");
-                    out.println("       <input type='submit' value='Click Here'> </form>");
-                    out.println("       </td>"); 
-                               
-                    out.println("       <td> <form action='DBCancelBooking' method='post'>  ");                    
-                    out.println("       <input type='hidden' name='id' value='" + orderID + "'> ");
-                    out.println("       <input type='submit' value='Cancel Booking'> </form>");
-                    out.println("       </td>"); 
-                }
+            if (insertStatus == 1) {
+                out.println("<script>");
+                out.println("    alert('Thank you for choosing us');");
+                out.println("    window.location = '/DBDataTable'");
+                out.println("</script>");
+                
+                sendPage(request, response, "/cancelbooking.jsp"); 
             }
-                out.println("  <tbody>");
-                out.println("</table>");
+            
         }
-	catch (SQLException ex)
+        catch (SQLException ex)
 	{
             while (ex != null)
             {
@@ -143,9 +105,9 @@ public class DBSearching extends HttpServlet {
             System.out.println("Connection to the database error");
             
             PrintWriter out = response.getWriter();
-
+            
             out.println("<script>");
-            out.println("    alert('Booking failed');");
+            out.println("    alert('Registration failed');");
             out.println("    window.location = '/DBDataTable'");
             out.println("</script>");            
 	}
@@ -154,8 +116,9 @@ public class DBSearching extends HttpServlet {
             ex.printStackTrace ();
             
             PrintWriter out = response.getWriter();
+            
             out.println("<script>");
-            out.println("    alert('Booking failed');");
+            out.println("    alert('Registration failed');");
             out.println("    window.location = '/DBDataTable'");
             out.println("</script>");
 	}       
@@ -174,8 +137,8 @@ public class DBSearching extends HttpServlet {
 	}
 	else
 	    dispatcher.forward(req, res);
-    }     
-
+    }   
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

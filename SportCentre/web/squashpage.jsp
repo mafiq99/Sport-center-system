@@ -110,7 +110,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Monday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -153,7 +160,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Tuesday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -196,7 +210,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Wednesday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -239,7 +260,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Thursday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -282,7 +310,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Friday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -325,7 +360,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Saturday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>
@@ -368,7 +410,14 @@
                                                    <td><input type="text" name="testend" value="${row.end}" size="6" readonly></td>                                                   
                                                    <td> <c:out value = "${row.status}"/></td>
                                                    <input type="hidden" name="testday" value="Sunday" size="6">
-                                                   <td><button id="1" onclick="window.location.href='squashpage.jsp'">Reserve</button></td>
+                                                   <c:choose>
+                                                        <c:when test="${row.status=='Available'}"> 
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #008000;" enabled>Reserve</button></td>
+                                                        </c:when>
+                                                        <c:when test="${row.status=='Unavailable'}">
+                                                            <td><button id="btnSubmit7" onclick="window.location.href='badmintonpage.jsp'" style="color: #FF0000;" disabled>Reserve</button></td>
+                                                        </c:when>    
+                                                   </c:choose>
                                                    </form>
                                                 </tr>
                                             </c:forEach>

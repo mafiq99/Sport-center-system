@@ -7,29 +7,81 @@ and open the template in the editor.
 <html>
     <head>
         <title>Registration</title>
-        <link rel="stylesheet" href="css/register.css">
+        <link rel='stylesheet' href='style.css'/>
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <main>
-            <div class="background">
-                <div class="text">
-                    <h1>Signup</h1>
-                    <p>Have Account? <a href="login.jsp">Login</a></p>
-                </div>
-                <div class="box">
-                    <form class="form" method="post" action="DBRegCustomer">
-                        <input type="text" class="username" placeholder="Username" name="username" required>
-                        <input type="password" class="password" placeholder="Password" name="password" required>
-                        <input type="text" class="fullname" placeholder="Full Name" name="name" required>
-                        <input type="text" class="ic" placeholder="IC" name="ic" required>
-                        <input type="text" class="phoneNum" placeholder="Phone Number" name="phoneNum" required>
-                        <input type="email" class="email" placeholder="email" name="email" required>
-                        <input type="submit" class="button" value="Submit">
-                    </form>
+            
+            <form class="form" method="post" action="DBRegCustomer">
+            <div class="container pb-5">
+            <div class="row align-items-start justify-content-center"></div>
+            <div class="row align-items-center pt-4">
+                <div class="col">
+                    <div class="card mb-2 bg-light text-dark" style="width: auto;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="text-align: center;"><b>Signup New Account</b></h4>
+                            <div class="row g-2 p-2">
+                                <div class="col">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Username</label>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your username" name="username" size="100" required>                                    
+                                  </div>
+                                </div>
+                                <div class="col-md">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Password</label>
+                                    <input type="password" class="form-control" id="floatingInput" placeholder="Enter your password" name="password" size="100" required>                                    
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 p-2">
+                                <div class="col">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Full Name</label>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your full name" name="name" size="100" required>                                    
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 p-2">
+                                <div class="col">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Identification Number(IC)</label>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your identification number" name="ic" size="100" required>                                    
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row g-2 p-2">
+                                <div class="col">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Phone Number</label>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your phone number" name="phoneNum" size="100" required>                                    
+                                  </div>
+                                </div>
+                                <div class="col-md">
+                                  <div class="form-floating">
+                                    <label for="floatingInput">Email</label>
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="Enter your email address" name="email" size="100" required>                                    
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-3 mx-auto pt-1">
+                        <input class="btn btn-warning" type="reset" value="Reset Form">
+                        <input class=" btn btn-primary" type="submit" value="Register">                                            
+                    </div>
+                    <div class="d-grid gap-2 col-2 mx-auto pt-2">
+                        <p>Already have an account? </p><a class="btn btn-success" href="Login.jsp" role="button">Login</a>                                           
+                    </div>
                 </div>
             </div>
-        </main>
+            </div>
+            </form>
     </body>
 </html>

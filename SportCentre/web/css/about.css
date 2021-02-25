@@ -102,17 +102,6 @@ li{
     grid-template-rows: repeat(1,1fr);
 }
 
-#grid2 {
-    width: auto; 
-    height: 300px;
-    margin: auto;
-    background-color: wheat;
-
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(1,1fr);
-}
-
 #1 {
   height: 100%;
   background-color: blue;

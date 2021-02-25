@@ -7,6 +7,7 @@ package jdbc;
 import java.util.*;
 import java.sql.*;
 import data.SignIn;
+import data.Admin;
 
 /**
  *
@@ -329,4 +330,33 @@ public class JDBCUtility
             
         
                 }
+                
+                public Admin checkAdminLogin(String username, String password) throws SQLException,
+            ClassNotFoundException {
+        
+         
+        loadDriver(driver);
+        Connection con = getConnection();
+        
+        String sql = "select * from admin where username = ? and password = ?";
+        PreparedStatement ps;
+        
+
+            ps = con.prepareStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            
+           ResultSet result=ps.executeQuery();
+            
+            Admin admin = null;
+            
+            if(result.next()){
+                admin = new Admin(username,password);
+                admin.setUsername(result.getString("username"));
+                admin.setPassword(password);
+            }
+             con.close();      
+            return admin;    
+       
+    }
    }

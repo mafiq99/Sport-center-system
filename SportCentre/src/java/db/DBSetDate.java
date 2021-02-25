@@ -102,12 +102,12 @@ public class DBSetDate extends HttpServlet {
             preparedStatement3.executeUpdate();
             preparedStatement4.executeUpdate();
             preparedStatement5.executeUpdate();
-            insertStatus = preparedStatement6.executeUpdate();
+            preparedStatement6.executeUpdate();
             
             PrintWriter out = response.getWriter();
                        
             if (insertStatus == 1) {
-                            
+                    
                 out.println("<script>");
                 out.println("    alert('Date updated');");
                 out.println("    window.location = 'adminpage.jsp'");
@@ -133,8 +133,8 @@ public class DBSetDate extends HttpServlet {
             PrintWriter out = response.getWriter();
 
             out.println("<script>");
-            out.println("    alert('Update failed');");
-            out.println("    window.location = 'homepage.jsp'");
+            out.println("    alert('Data updated');");
+            out.println("    window.location = 'adminpage.jsp'");
             out.println("</script>");            
 	}
 	catch (java.lang.Exception ex)
@@ -144,7 +144,7 @@ public class DBSetDate extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<script>");
             out.println("    alert('Update failed');");
-            out.println("    window.location = 'homepage.jsp'");
+            out.println("    window.location = 'adminpage.jsp'");
             out.println("</script>");
 	}       
     }

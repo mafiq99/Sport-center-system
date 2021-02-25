@@ -79,77 +79,48 @@
                           </tr>
                         </thead>
                         <tbody>
-    <!-- MONDAY -->                       
+    <!-- MONDAY -->     <form action="DBSetDate" method="POST">                  
                           <tr>
                             <th scope="row">Monday</th>
-                            <form action="DBSetDate" method="POST">
+                            
                             <td>                               
                                     <input type="date" id="mon" name="monday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- TUESDAY -->                      
                           <tr>
                             <th scope="row">Tuesday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="tue" name="tuesday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- WEDNESDAY -->                      
                           <tr>
                             <th scope="row">Wednesday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="wed" name="wednesday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- THURSDAY -->                      
                           <tr>
                             <th scope="row">Thursday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="thu" name="thursday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- FRIDAY -->                      
                           <tr>
                             <th scope="row">Friday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="fri" name="friday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- SATURDAY -->                      
                           <tr>
                             <th scope="row">Saturday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="sat" name="saturday">                              
                             </td>
-                            <td>
-                                <button class="subt">Submit</button>
-                            </td>
-                            </form> 
                           </tr>
     <!-- SUNDAY -->                      
                           <tr>
@@ -158,13 +129,17 @@
                             <td>                               
                                     <input type="date" id="sun" name="sunday">                              
                             </td>
-                            <td>
+                            
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row"></th>
+                              <td>
                                 <button class="subt">Submit</button>
                             </td>
-                            </form> 
                           </tr>
                           
-                            
+                        </form>     
                         </tbody>
                   </table>
                     

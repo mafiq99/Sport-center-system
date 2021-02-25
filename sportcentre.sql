@@ -663,12 +663,6 @@ ALTER TABLE `monday`
   ADD PRIMARY KEY (`Type`,`Slot`);
 
 --
--- Indexes for table `saturday`
---
-ALTER TABLE `saturday`
-  ADD PRIMARY KEY (`Type`,`Slot`);
-
---
 -- Indexes for table `sunday`
 --
 ALTER TABLE `sunday`

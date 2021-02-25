@@ -134,7 +134,7 @@ public class DBSetDate extends HttpServlet {
 
             out.println("<script>");
             out.println("    alert('Update failed');");
-            out.println("    window.location = '/DBDataTable'");
+            out.println("    window.location = 'homepage.jsp'");
             out.println("</script>");            
 	}
 	catch (java.lang.Exception ex)
@@ -144,7 +144,7 @@ public class DBSetDate extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<script>");
             out.println("    alert('Update failed');");
-            out.println("    window.location = '/DBDataTable'");
+            out.println("    window.location = 'homepage.jsp'");
             out.println("</script>");
 	}       
     }

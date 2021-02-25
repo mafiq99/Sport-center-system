@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2021 at 09:30 AM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.7
+-- Generation Time: Feb 25, 2021 at 01:52 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `booking` (
   `Slot` varchar(10) NOT NULL,
   `Time` varchar(30) NOT NULL,
   `Date` varchar(20) NOT NULL,
-  `attendance` varchar(25) NOT NULL
+  `attendance` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -64,7 +64,8 @@ INSERT INTO `booking` (`orderID`, `username`, `Court`, `Slot`, `Time`, `Date`, `
 (26, 'aidiel', 'Badminton', '2e', '4.00 pm-6.00 pm', '2021-02-14', ''),
 (27, 'aidiel', 'Badminton', '2e', '4.00 pm-6.00 pm', '2021-02-14', ''),
 (28, 'aidiel', 'Badminton', '2e', '4.00 pm-6.00 pm', '2021-02-14', ''),
-(29, 'aidiel', 'Badminton', '1a', '8.00 am-10.00 am', '2021-02-08', '');
+(29, 'aidiel', 'Badminton', '1a', '8.00 am-10.00 am', '2021-02-08', ''),
+(30, 'Aniq', 'Badminton', '1a', '8.00 am-10.00 am', '2021-02-08', NULL);
 
 -- --------------------------------------------------------
 
@@ -141,20 +142,6 @@ INSERT INTO `friday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-12', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-12', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-12', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-12', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-12', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-12', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-12', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-12', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-12', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-12', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-12', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -168,9 +155,21 @@ INSERT INTO `friday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-12', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-12', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-12', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-12', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
-
-
+('2021-02-12', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-12', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-12', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-12', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-12', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-12', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 -- --------------------------------------------------------
 
@@ -192,7 +191,7 @@ CREATE TABLE `monday` (
 --
 
 INSERT INTO `monday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
-('2021-02-08', 'Badminton', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-08', 'Badminton', '1a', '8.00 am', '10.00 am', 'Unavailable'),
 ('2021-02-08', 'Badminton', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-08', 'Badminton', '1c', '12.00 pm', '2.00 pm', 'Available'),
 ('2021-02-08', 'Badminton', '1d', '2.00 pm ', '4.00 pm', 'Available'),
@@ -220,20 +219,6 @@ INSERT INTO `monday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-08', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-08', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-08', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-08', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-08', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-08', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-08', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-08', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-08', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-08', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-08', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -247,7 +232,21 @@ INSERT INTO `monday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-08', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-08', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-08', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-08', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
+('2021-02-08', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-08', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-08', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-08', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-08', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-08', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 -- --------------------------------------------------------
 
@@ -374,20 +373,6 @@ INSERT INTO `sunday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-14', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-14', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-14', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-14', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-14', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-14', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-14', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-14', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-14', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-14', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-14', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -401,7 +386,21 @@ INSERT INTO `sunday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-14', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-14', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-14', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-14', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
+('2021-02-14', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-14', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-14', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-14', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-14', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-14', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 -- --------------------------------------------------------
 
@@ -451,20 +450,6 @@ INSERT INTO `thursday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-11', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-11', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-11', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-11', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-11', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-11', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-11', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-11', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-11', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-11', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-11', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -478,7 +463,21 @@ INSERT INTO `thursday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-11', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-11', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-11', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-11', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
+('2021-02-11', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-11', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-11', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-11', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-11', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-11', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 -- --------------------------------------------------------
 
@@ -528,20 +527,6 @@ INSERT INTO `tuesday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-09', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-09', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-09', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-09', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-09', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-09', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-09', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-09', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-09', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-09', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-09', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -555,7 +540,21 @@ INSERT INTO `tuesday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUES
 ('2021-02-09', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-09', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-09', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-09', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
+('2021-02-09', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-09', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-09', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-09', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-09', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-09', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 -- --------------------------------------------------------
 
@@ -605,20 +604,6 @@ INSERT INTO `wednesday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUE
 ('2021-02-10', 'Futsal', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-10', 'Futsal', '2f', '8.00 pm', '10.00 pm', 'Available'),
 ('2021-02-10', 'Futsal', '2g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-10', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-10', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
-('2021-02-10', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
-('2021-02-10', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-10', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available'),
 ('2021-02-10', 'Squash', '1a', '8.00 am', '10.00 am', 'Available'),
 ('2021-02-10', 'Squash', '1b', '10.00 am', '12.00 pm', 'Available'),
 ('2021-02-10', 'Squash', '1c', '12.00 pm', '2.00 pm', 'Available'),
@@ -632,7 +617,21 @@ INSERT INTO `wednesday` (`Date`, `Type`, `Slot`, `Start`, `End`, `Status`) VALUE
 ('2021-02-10', 'Squash', '2d', '2.00 pm', '4.00 pm', 'Available'),
 ('2021-02-10', 'Squash', '2e', '4.00 pm', '6.00 pm', 'Available'),
 ('2021-02-10', 'Squash', '2f', '8.00 pm', '10.00 pm', 'Available'),
-('2021-02-10', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available');
+('2021-02-10', 'Squash', '2g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-10', 'Volleyball', '1a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-10', 'Volleyball', '1b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '1c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '1d', '2.00 pm ', '4.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '1e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '1f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '1g', '10.00 pm', '12.00 am', 'Available'),
+('2021-02-10', 'Volleyball', '2a', '8.00 am', '10.00 am', 'Available'),
+('2021-02-10', 'Volleyball', '2b', '10.00 am', '12.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '2c', '12.00 pm', '2.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '2d', '2.00 pm', '4.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '2e', '4.00 pm', '6.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '2f', '8.00 pm', '10.00 pm', 'Available'),
+('2021-02-10', 'Volleyball', '2g', '10.00 pm', '12.00 am', 'Available');
 
 --
 -- Indexes for dumped tables
@@ -695,7 +694,7 @@ ALTER TABLE `wednesday`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `customer`

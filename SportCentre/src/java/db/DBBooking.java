@@ -166,7 +166,7 @@ public class DBBooking extends HttpServlet {
 
             out.println("<script>");
             out.println("    alert('Booking failed');");
-            out.println("    window.location = '/DBDataTable'");
+            out.println("    window.location = 'homepage.jsp'");
             out.println("</script>");            
 	}
 	catch (java.lang.Exception ex)
@@ -176,7 +176,7 @@ public class DBBooking extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<script>");
             out.println("    alert('Booking failed');");
-            out.println("    window.location = '/DBDataTable'");
+            out.println("    window.location = 'homepage.jsp'");
             out.println("</script>");
 	}       
     }

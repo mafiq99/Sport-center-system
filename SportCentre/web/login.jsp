@@ -7,7 +7,7 @@
     <!-- <title>Login Form Design | CodeLab</title> -->
     <link rel="stylesheet" href="css/login.css">
   </head>
-  <body>
+  <body style="background-color: darkslategrey;">
     <div class="wrapper">
       <div class="title">Sport Centre</div>
         <form action="DBLogin" method="POST">

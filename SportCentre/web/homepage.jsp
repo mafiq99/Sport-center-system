@@ -161,6 +161,7 @@
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="mybooking.jsp">My Booking</a></li>
                                         <li><a href="myprofile.jsp">My Profile</a></li>
+					<li><a href="logout.jsp">LogOut</a></li>
                                     </ul>
 
 				</nav>

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import data.Admin;
 import data.Customer;
 import data.SignIn;
 import java.sql.Connection;
@@ -88,8 +89,18 @@ public class DBLogin extends HttpServlet {
         try{
             
            SignIn signIn = jdbcUtility.checkLogin(username, password);
+           Admin admin = jdbcUtility.checkAdminLogin(username, password);
            String destPage = "LoginPage.jsp";
            
+           
+           if(admin != null){
+               
+                      HttpSession session = request.getSession();
+                      session.setAttribute("admin", admin);
+                      session.setAttribute("username", username);
+                      session.setAttribute("password", password);
+                      destPage ="adminpage.jsp";
+           }
            if(signIn != null){
                
                     String name = signIn.getName();

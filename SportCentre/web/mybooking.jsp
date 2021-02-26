@@ -1,3 +1,8 @@
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +17,19 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        
+        
+        
 </head>
 <body class="sb-nav-fixed">
+     <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
+         url = "jdbc:mysql://localhost/sportcentre"
+         user = "root"  password = ""/>
+         <sql:query dataSource = "${snapshot}" var = "result">
+             
+            SELECT * from booking WHERE username=?;
+            <sql:param value="${username}" />
+         </sql:query>
             <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
                 <a class="navbar-brand" href="homepage.jsp">Aidiel Sport Centre</a>
                 <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -27,9 +43,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">Settings</a> 
+                            
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="login.html">Logout</a>
+                            <a class="dropdown-item" href="DBLogout">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -71,11 +87,49 @@
                             out.print(name);
                         %>
                         </div>
-                    </nav>
+                    </nav> 
                 </div>
                 <div id="layoutSidenav_content">
                     <main>
-                     
+                     <div class="container-fluid">
+                            <h1 class="mt-4">My Booking</h1>
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item active"><%
+                            String name1=(String)session.getAttribute("username");
+
+                            out.print(name);
+                        %> Booking Details</li>
+                            </ol>
+                            <div class="row">
+                                <jsp:useBean id="customer" type="data.Customer" scope="session" />
+        <div>
+            <div class="container d-grid col-auto mx-auto"><div class="col"><table class="table table-striped table-hover">
+                <tbody>
+                    <tr>
+                        
+                        <th><div align="left">COURT</div></th>
+                        <th><div align="left">SLOT</div></th>
+                        <th><div align="left">TIME</div></th>
+                        <th><div align="left">DATE</div></th>
+                    </tr>
+                    <c:forEach var = "row" items = "${result.rows}">
+                    <tr>
+                        
+                        
+                            <td><div align="left"><c:out value="${row.Court }" /></div></th>
+                                <td><div align="left"><c:out value="${row.Slot }" /></div></th>
+                                    <td><div align="left"><c:out value="${row.Time }" /></div></th>
+                                        <td><div align="left"><c:out value="${row.Date }" /></div></th>
+                            
+									
+                    </tr>
+                    </c:forEach>
+                </tbody>                                
+                    </table></div></div> 
+           
+            </div>
+                            </div>
+                        </div>
                     </main>
                     <footer class="py-4 bg-light mt-auto">
                         <div class="container-fluid">

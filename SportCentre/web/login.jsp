@@ -2,12 +2,13 @@
 <!-- Created By CodingNepal -->
 <html lang="en" dir="ltr">
   <head>
+      <title>Login</title>
     <meta charset="utf-8">
     <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
     <!-- <title>Login Form Design | CodeLab</title> -->
     <link rel="stylesheet" href="css/login.css">
   </head>
-  <body style="background-color: darkslategrey;">
+  <body style="background-color: whitesmoke;">
     <div class="wrapper">
       <div class="title">Sport Centre</div>
         <form action="DBLogin" method="POST">

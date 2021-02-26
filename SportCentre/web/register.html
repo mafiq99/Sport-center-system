@@ -14,41 +14,42 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color: darkslategrey;">
-        <div class="container pt-lg-4"><h2 style="text-align: center; color: white;"><b>Sign Up</b></h2></div>
-                <div class="container pl-lg-5 pr-lg-5">
+    <body style="background-color: whitesmoke;">
+        <div class="col-5 mx-auto">
+            <div class="container mt-3 pt-lg-3 col-10 bg-dark mb-4 pb-lg-1 rounded-lg" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">
+                <h2 style="text-align: center; color: white"><b>Sign Up</b></h2>       
                     <form class="form" method="post" action="DBRegCustomer">
-                        <div class="col-md-6 mx-auto"><div class="col-sm-12">
-                            <label for="floatingInput" style="color: white;">Username</label>
+                        <div class="col-md-11 mx-auto"><div class="col-sm-12">
+                            <label for="floatingInput" style="color: whitesmoke">Username</label>
                             <input type="text" class="form-control" id="floatingInput" placeholder="Enter your username" name="username" size="100" required>                                    
                         </div>
                         <div class="col-md-12">
-                            <label for="floatingInput" style="color: white;">Password</label>
+                            <label for="floatingInput" style="color: whitesmoke">Password</label>
                             <input type="password" class="form-control" id="floatingInput" placeholder="Enter your password" name="password" size="100" required>                                    
                         </div>
                         <div class="col-md-12">
-                            <label for="floatingInput" style="color: white;">Full Name</label>
+                            <label for="floatingInput" style="color: whitesmoke">Full Name</label>
                             <input type="text" class="form-control" id="floatingInput" placeholder="Enter your full name" name="name" size="100" required>                                    
                         </div>
                         <div class="col-md-12">
-                            <label for="floatingInput" style="color: white;">Identification Number (IC)</label>
+                            <label for="floatingInput" style="color: whitesmoke">Identification Number (IC)</label>
                             <input type="text" class="form-control" id="floatingInput" placeholder="Enter your identification number" name="ic" size="100" required>                                    
                         </div>
                         <div class="col-md-12">
-                            <label for="floatingInput" style="color: white;">Phone Number</label>
+                            <label for="floatingInput" style="color: whitesmoke">Phone Number</label>
                             <input type="text" class="form-control" id="floatingInput" placeholder="Enter your phone number" name="phoneNum" size="100" required>                                    
                         </div>
                         <div class="col-md-12">
-                            <label for="floatingInput" style="color: white;">Email</label>
+                            <label for="floatingInput" style="color: whitesmoke">Email</label>
                             <input type="email" class="form-control" id="floatingInput" placeholder="Enter your email address" name="email" size="100" required>                                    
                         </div></div>
-                        <div class="container pt-lg-4 d-grid col-3 mx-auto pb-lg-2"><div class="col-md-12">
+                        <div class="container pt-lg-3 d-grid col-8 mx-auto pb-lg-2"><div class="col-md-12">
                             <input type="submit" class="btn btn-success" value="Register">
                             <input type="reset" class="btn btn-danger" value="Reset Form">
                         </div></div>
-                        <div class="col-md-12"><p style="text-align: center; color: white;">Already Have an Account? <a style="color: lightcoral" href="login.jsp"><b>Login</b></a></p></div>
+                        <div class="col-md-12"><p style="text-align: center; color: whitesmoke">Already Have an Account? <a style="color: red" href="login.jsp"><b>Login</b></a></p></div>
                     </form>
-                </div>
-        
+            </div>
+        </div>    
     </body>
 </html>

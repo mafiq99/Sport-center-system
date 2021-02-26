@@ -75,18 +75,7 @@
                 </div>
                 <div id="layoutSidenav_content">
                     <main>
-                        <div class="container-fluid">
-                            <h1 class="mt-4">About</h1>
-                            <ol class="breadcrumb mb-4">
-                                <li class="breadcrumb-item active"> 
-                                    <p>This sports centre was built in 2023 and still stands to this day. The name of this center is taken from the name of its founder himself, Datuk Dr Muhammad Aidiel Bin Jamallullail.</p>
-        <br><br><br>
-        <p><i><b>"I feel that people need to have a good healthy life, therefore I come up with the idea to built this sport centre so that many people will have more fun to work out their body. 
-                  " - Datuk Dr Muhammad Aidiel</b></i></p></li>
-                            </ol>
-                         
-                            
-                        </div>
+                     
                     </main>
                     <footer class="py-4 bg-light mt-auto">
                         <div class="container-fluid">

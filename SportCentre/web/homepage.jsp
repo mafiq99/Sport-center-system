@@ -29,7 +29,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">Settings</a> 
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="login.html">Logout</a>
+                            <a class="dropdown-item" href="DBLogout">Logout</a>
                         </div>
                     </li>
                 </ul>

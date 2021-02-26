@@ -78,50 +78,50 @@
                         <div class="container-fluid">
                             <h1 class="mt-4">Home Page</h1>
                             <ol class="breadcrumb mb-4">
-                                <li class="breadcrumb-item active">Home Page</li>
+                                <li class="breadcrumb-item active">Home Page of Aidiel Sport Center</li>
                             </ol>
                             <div class="row">
                                 <div class="col-xl-3 col-md-6">
                                     <div class="card bg-primary text-white mb-4">
-                                        <div class="card-body">Badminton</div>
-                                        <img src="img/badminton.jpg" alt="Trulli" width="500" height="333" class="center">
+                                        <div class="card-body"><b>Badminton</b></div>
+                                        <img src="img/badminton.jpg" alt="Trulli" width="500" height="200" class="center">
                                         <br>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <a class="small text-white stretched-link" href="badmintonpage.jsp">Book now!</a>
+                                            <a class="small text-white stretched-link" href="badmintonpage.jsp"><b>Book Now!</b></a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
                                     <div class="card bg-warning text-white mb-4">
-                                        <div class="card-body">Futsal</div>
-                                        <img src="img/court futsal.jpg" alt="Trulli" width="500" height="333" class="center">
+                                        <div class="card-body"><b>Futsal</b></div>
+                                        <img src="img/futsal.jpg" alt="Trulli" width="500" height="200" class="center">
                                         <br>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
                                             
-                                            <a class="small text-white stretched-link" href="futsalpage.jsp">Book now!</a>
+                                            <a class="small text-white stretched-link" href="futsalpage.jsp"><b>Book Now!</b></a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
                                     <div class="card bg-success text-white mb-4">
-                                        <div class="card-body">Squash</div>
-                                        <img src="img/squash.jpg" alt="Trulli" width="500" height="333" class="center">
+                                        <div class="card-body"><b>Squash</b></div>
+                                        <img src="img/squash.jpg" alt="Trulli" width="500" height="200" class="center">
                                         <br>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <a class="small text-white stretched-link" href="squashpage.jsp">Book now!</a>
+                                            <a class="small text-white stretched-link" href="squashpage.jsp"><b>Book Now!</b></a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-md-6">
                                     <div class="card bg-danger text-white mb-4">
-                                        <div class="card-body">Volleyball</div>
-                                        <img src="img/court volleyball.jpg" alt="Trulli" width="500" height="333" class="center">
+                                        <div class="card-body"><b>Volleyball</b></div>
+                                        <img src="img/court volleyball.jpg" alt="Trulli" width="500" height="200" class="center">
                                         <br>
                                         <div class="card-footer d-flex align-items-center justify-content-between">
-                                            <a class="small text-white stretched-link" href="volleyballpage.jsp ">Book now!</a>
+                                            <a class="small text-white stretched-link" href="volleyballpage.jsp "><b>Book Now!</b></a>
                                             <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                         </div>
                                     </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>AidielSportCenter</title>
+	<title>Aidiel Sport Center</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<link href="css/style2.css" rel="stylesheet">
         <meta charset="utf-8" />

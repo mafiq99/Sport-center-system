@@ -35,7 +35,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">Settings</a> 
+                           
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="login.html">Logout</a>
                         </div>
@@ -49,22 +49,13 @@
                         <div class="sb-sidenav-menu">
                             <div class="nav">
                                 <div class="sb-sidenav-menu-heading">Core</div>
-                                <a class="nav-link" href="homepage.jsp">
+                                 <a class="nav-link" href="setdate.jsp">
                                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                    Homepage
+                                    Set Date
                                 </a>
-                                <a class="nav-link" href="myprofile.jsp">
+                                <a class="nav-link" href="cancelbooking.jsp">
                                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                    Profile
-                                </a>
-                                <div class="sb-sidenav-menu-heading">Main</div>
-                                <a class="nav-link" href="about.jsp">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                    About
-                                </a>
-                                <a class="nav-link" href="mybooking.jsp">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                    Booking
+                                    Manage Customer
                                 </a>
                                           
                             </div>

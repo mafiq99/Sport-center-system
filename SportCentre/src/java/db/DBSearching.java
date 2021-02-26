@@ -74,7 +74,7 @@ public class DBSearching extends HttpServlet {
             ResultSet rs = preparedStatement.executeQuery();
             PrintWriter out = response.getWriter();
             
-            out.println("<h2>View All Student</h2>");
+            out.println("<h2>View All Booking</h2>");
             out.println("<table border='1'>");
             out.println("  <thead>");
             out.println("    <tr>");
@@ -153,11 +153,7 @@ public class DBSearching extends HttpServlet {
 	{
             ex.printStackTrace ();
             
-            PrintWriter out = response.getWriter();
-            out.println("<script>");
-            out.println("    alert('Booking failed');");
-            out.println("    window.location = 'adminpage.jsp'");
-            out.println("</script>");
+            
 	}       
     }
     

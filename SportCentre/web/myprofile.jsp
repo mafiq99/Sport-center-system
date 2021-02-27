@@ -109,11 +109,7 @@
                     </tr>
                 </tbody>                                
                     </table></div></div> 
-            <nav>
-                <div class="container d-grid col-6 mx-auto"><div class="col-md-12">
-                        <a class="btn btn-primary" href="editprofile.jsp">Edit Profile</a>
-                    </div></div>
-            </nav>
+          
             </div>
                             </div>
                         </div>

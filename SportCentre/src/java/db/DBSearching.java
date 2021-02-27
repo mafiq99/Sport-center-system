@@ -67,6 +67,7 @@ public class DBSearching extends HttpServlet {
         
         int insertStatus = 0;
         String username = request.getParameter("user");
+        
         String court, slot, time, date, presence, orderID;
         try {                    
             PreparedStatement preparedStatement = jdbcUtility.psSearching();

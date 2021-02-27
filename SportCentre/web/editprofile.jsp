@@ -167,6 +167,7 @@
                                                     <span style="color:red; font-weight: bold; align-content: center;">
                                                         <br><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%><br>
                                                     </span><br>
+                                                    <input type='hidden' name='id' value="<jsp:getProperty name="customer" property="ID"/>">
                                                     <input type="hidden" name="option" id="option" value = "submitEditData">
                                                     <button type="submit" class="btn btn-success" name="button"><i class="fas fa-user-edit"></i>Update</button>
                                                 </div>

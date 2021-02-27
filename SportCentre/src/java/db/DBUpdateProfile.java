@@ -62,7 +62,7 @@ public class DBUpdateProfile extends HttpServlet {
         
         int insertStatus = 0;
         
-        int ID = 2;
+        String ID = request.getParameter("id");
         String name = request.getParameter("name");
         String phoneNum = request.getParameter("phoneNum");
         String email = request.getParameter("email");
@@ -75,7 +75,7 @@ public class DBUpdateProfile extends HttpServlet {
             preparedStatement.setString(2, name);
             preparedStatement.setString(3, phoneNum);
             preparedStatement.setString(4, email);
-            preparedStatement.setInt(5, ID);
+            preparedStatement.setString(5, ID);
             
             insertStatus = preparedStatement.executeUpdate();
             
@@ -85,11 +85,8 @@ public class DBUpdateProfile extends HttpServlet {
             
             if (insertStatus == 1) {
                 out.println("<script>");
-                out.println("    alert('Profile updated');");
-             
-                
+                out.println("    alert('Profile updated');");              
                 out.println("</script>");
-                
                 sendPage(request, response, "/myprofile.jsp"); 
             }
             

@@ -99,14 +99,9 @@
                         </div>
                     </nav>
                     <div class="jumbotron">      
-                        <div class="edit-profile-container">
-
-                            <form name="form" action="ManageUserController" method="post" onsubmit="return validate()">
-                                <div class="container d-grid mx-auto"><div class="col"><table class="table table-striped table-light custom-shadow">
-
                             <form name="form" action="DBUpdateProfile" method="post" onsubmit="return validate()">
+                                <div class="edit-profile-container">
                                 <table class="table table-striped table-light custom-shadow">
-
                                     <thead class="thead-dark">
                                         <tr>
                                             <th colspan="2"><div align="middle">Profile Information</div></th>
@@ -178,13 +173,14 @@
                                             </td>
                                         </tr>
                                     </tbody>                                
-                                        </table></div></div>
+                                </table>
+                               </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <!-- END PAGE CONTENT -->
-            </div>
+            
         </div>
                                 
                             </div>

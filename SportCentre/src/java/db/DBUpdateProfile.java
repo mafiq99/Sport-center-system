@@ -87,7 +87,7 @@ public class DBUpdateProfile extends HttpServlet {
                 out.println("<script>");
                 out.println("    alert('Profile updated');");
              
-                out.println("    window.location = '/DBDataTable'");
+                
                 out.println("</script>");
                 
                 sendPage(request, response, "/myprofile.jsp"); 

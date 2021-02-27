@@ -111,7 +111,7 @@ public class DBSearching extends HttpServlet {
                     out.println("       <input type='submit' value='Cancel Booking' disabled> </form>");
                     out.println("       </td>"); 
                 }
-                else{
+                else if (presence.equals("-")){
                     out.println("       <td> <form action='DBUpdateAttandance' method='post'>  ");                    
                     out.println("       <input type='hidden' name='id' value='" + orderID + "'> ");
                     out.println("       <input type='submit' value='Click Here'> </form>");

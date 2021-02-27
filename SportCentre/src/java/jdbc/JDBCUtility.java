@@ -123,7 +123,7 @@ public class JDBCUtility
                        String sqlRegCustomer = "INSERT INTO customer(username, password, name, ic, phoneNum, email) VALUES(?, ?, ?, ?, ?, ?)";
                        psRegCustomer = con.prepareStatement(sqlRegCustomer);
                        
-                       String sqlInsertBooking = "INSERT INTO booking(username, Court, Slot, Time, Date) VALUES(?, ?, ?, ?, ?)";
+                       String sqlInsertBooking = "INSERT INTO booking(username, Court, Slot, Time, Date, attendance) VALUES(?, ?, ?, ?, ?, ?)";
                        psInsertBooking = con.prepareStatement(sqlInsertBooking);
                        
                        String sqlUpdateMonday = "UPDATE monday SET Status = ? WHERE Type = ? AND Slot = ?"; 

@@ -173,13 +173,11 @@
     <!-- SUNDAY -->                      
                           <tr>
                             <th scope="row">Sunday</th>
-                            <form action="DBSetDate" method="POST">
                             <td>                               
                                     <input type="date" id="sun" name="sunday">                              
                             </td>
-                            
-                            
                           </tr>
+                          
                           <tr>
                             <th scope="row"></th>
                               <td>

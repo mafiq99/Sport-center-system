@@ -82,6 +82,7 @@ public class DBBooking extends HttpServlet {
             preparedStatement.setString(3, slot);
             preparedStatement.setString(4, time);
             preparedStatement.setString(5, date);
+            preparedStatement.setString(6, "-");
             
             insertStatus = preparedStatement.executeUpdate();
             

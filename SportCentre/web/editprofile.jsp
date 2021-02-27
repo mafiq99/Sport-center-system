@@ -40,7 +40,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <tr>
                                             <td>
                                                 <div class="form-group row td-custom">
@@ -50,10 +49,12 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
                                                 <div class="form-group row td-custom">
-                                                    <label for="phoneNum" class="col-sm-4 col-form-label" style="font-weight: bolder;">PHONE NUMBER</label>
-                                                    <div class="col-sm-8">
+                                                    <label for="phoneNum" class="col-sm-5 col-form-label" style="font-weight: bolder;">PHONE NUMBER</label>
+                                                    <div class="col-sm-7">
                                                         <input type="text" class="form-control" name="phoneNum" id="phoneNum" required value="<jsp:getProperty name="customer" property="phoneNum"/>">
                                                     </div>
                                                 </div>
@@ -99,12 +100,12 @@
                                                         <br><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%><br>
                                                     </span><br>
                                                     <input type="hidden" name="option" id="option" value = "submitEditData">
-                                                    <button type="submit" class="btn btn-success" name="button"><i class="fas fa-user-edit"></i> Submit</button>
+                                                    <button type="submit" class="btn btn-success" name="button"><i class="fas fa-user-edit"></i>Update</button>
                                                 </div>
                                             </td>
                                         </tr>
                                     </tbody>                                
-                                </table
+                                </table>
                             </form>
                         </div>
                     </div>
@@ -146,7 +147,7 @@
             } 
         </script> 
         
-        <jsp:include page="../../allModules/footer.jsp" />
+        
     </body>
 </html>
 

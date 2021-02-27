@@ -87,29 +87,34 @@
                                 <li class="breadcrumb-item active">My Profile Details</li>
                             </ol>
                             <div class="row">
-                                <jsp:useBean id="customer" type="data.Customer" scope="session" />
+    <jsp:useBean id="customer" type="data.Customer" scope="session" />
         <div>
-            <div class="container d-grid col-auto mx-auto"><div class="col"><table class="table table-striped table-hover">
-                <tbody>
-                    <tr>
-                        <th><div align="left">NAME</div></th>
-                        <td><label><div align="left"><jsp:getProperty name="customer" property="name"/></div></label></td>
-                    </tr>
-                    <tr>
-                        <th><div align="left">EMAIL</div></th>
-                        <td><label><div align="left"><jsp:getProperty name="customer" property="email"/></div></label></td>
-                    </tr>
-                    <tr>
-                        <th><div align="left">PHONE NUMBER</div></th>
-                        <td><label><div align="left"><jsp:getProperty name="customer" property="phoneNum"/></div></label></td>
-                    </tr>
-                    <tr>
-                        <th><div align="left">IC NUMBER</div></th>
-                        <td><label><div align="left"><jsp:getProperty name="customer" property="ic"/></div></label></td>
-                    </tr>
-                </tbody>                                
-                    </table></div></div> 
-          
+            <div class="container d-grid col-auto mx-auto"><div class="col">
+                <table class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <th><div align="left">NAME</div></th>
+                            <td><label><div align="left"><jsp:getProperty name="customer" property="name"/></div></label></td>
+                        </tr>
+                        <tr>
+                            <th><div align="left">EMAIL</div></th>
+                            <td><label><div align="left"><jsp:getProperty name="customer" property="email"/></div></label></td>
+                        </tr>
+                        <tr>
+                            <th><div align="left">PHONE NUMBER</div></th>
+                            <td><label><div align="left"><jsp:getProperty name="customer" property="phoneNum"/></div></label></td>
+                        </tr>
+                        <tr>
+                            <th><div align="left">IC NUMBER</div></th>
+                            <td><label><div align="left"><jsp:getProperty name="customer" property="ic"/></div></label></td>
+                        </tr>
+                    </tbody>                                
+                </table></div></div> 
+          <nav>
+                <div class="container d-grid col-6 mx-auto"><div class="col-md-12">
+                        <a class="btn btn-primary" href="editprofile.jsp">Edit Profile</a>
+                    </div></div>
+            </nav>
             </div>
                             </div>
                         </div>

@@ -100,8 +100,13 @@
                     </nav>
                     <div class="jumbotron">      
                         <div class="edit-profile-container">
+
                             <form name="form" action="ManageUserController" method="post" onsubmit="return validate()">
                                 <div class="container d-grid mx-auto"><div class="col"><table class="table table-striped table-light custom-shadow">
+
+                            <form name="form" action="DBUpdateProfile" method="post" onsubmit="return validate()">
+                                <table class="table table-striped table-light custom-shadow">
+
                                     <thead class="thead-dark">
                                         <tr>
                                             <th colspan="2"><div align="middle">Profile Information</div></th>

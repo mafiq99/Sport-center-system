@@ -46,6 +46,7 @@ public class JDBCUtility
               PreparedStatement psCancelBooking=null;
               PreparedStatement psSearching=null;
               PreparedStatement psUpdateAttandance=null;
+              PreparedStatement psUpdateProfile=null;
 
             //use this constructor if using ConnectionPool
             public JDBCUtility()
@@ -164,6 +165,9 @@ public class JDBCUtility
                        
                        String sqlUpdateAttandance = "UPDATE booking SET attendance= ? where orderID = ?";
                        psUpdateAttandance = con.prepareStatement(sqlUpdateAttandance);
+                       
+                       String sqlUpdateProfile = "UPDATE customer SET password = ?, name = ?, phoneNum = ?, email = ? where ID = ?";
+                       psUpdateProfile = con.prepareStatement(sqlUpdateProfile);
                  }
                  catch (SQLException ex)
                  {
@@ -267,6 +271,11 @@ public class JDBCUtility
                 public PreparedStatement psUpdateAttandance()
                 {
                   return psUpdateAttandance;
+                }
+                
+                public PreparedStatement psUpdateProfile()
+                {
+                  return psUpdateProfile;
                 }
                 
                 //LOGIN DAO

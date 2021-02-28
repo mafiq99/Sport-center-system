@@ -102,7 +102,7 @@
                         </tr>
                         <tr>
                             <th><div align="left">PHONE NUMBER</div></th>
-                            <td><label><div align="left"><jsp:getProperty name="customer" property="phoneNum"/></div></label></td>
+                            <td><label><div align="left">+60<jsp:getProperty name="customer" property="phoneNum"/></div></label></td>
                         </tr>
                         <tr>
                             <th><div align="left">IC NUMBER</div></th>

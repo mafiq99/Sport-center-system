@@ -123,7 +123,7 @@
                                                 <div class="form-group row td-custom">
                                                     <label for="phoneNum" class="col-sm-5 col-form-label" style="font-weight: bolder;">PHONE NUMBER</label>
                                                     <div class="col-sm-7">
-                                                        <input type="text" class="form-control" name="phoneNum" id="phoneNum" required value="<jsp:getProperty name="customer" property="phoneNum"/>">
+                                                        <input type="text" class="form-control" name="phoneNum" id="phoneNum" required value="0<jsp:getProperty name="customer" property="phoneNum"/>">
                                                     </div>
                                                 </div>
                                             </td>
